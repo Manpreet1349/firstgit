@@ -1,0 +1,114 @@
+<html>
+<head>
+<title>calculator</title>
+<style>
+.cont{
+position:relative;
+width:100%;
+text-align:center;
+}
+.calsi{
+width:350px;
+margin:100px auto;
+text-align:center;
+background:#e6eef328;
+box-shadow:0px 0px 6px 0px rgba(202, 179, 231, 0.4);
+}
+.calsi h1{
+font-size:40px;
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+font-weight:bold;
+color:rgb(214, 179, 66);
+text-transform:capitalize;
+padding:8px 0px;
+text-align:center;
+width:100%;
+background:rgb(181, 215, 231);
+margin:0 auto;
+}
+#inp{
+position:relative;
+width:100%;
+padding:8px 0px;
+text-align:center;
+font-size:16px;
+font-family:arial;
+font-weight:normal;
+color:#222;
+background:white;
+}
+.btns{
+position:relative;
+width:100%;
+padding:10px 0px;
+}
+.btns button{
+width:50px;
+height:50px;
+font-size:30px;
+color:#222;
+vertical-align:middle;
+border-radius:5px;
+background:white;
+margin:10px 5px;
+display:inline-block;
+}
+button{
+width:100px;
+height:50px;
+font-size:20px;
+color:#222;
+border-radius:5px;
+vertical-align:middle;
+background:rgb(243, 234, 111);
+margin:10px 5px;
+display:inline-block;
+}
+</style>
+</head>
+<body>
+<div class="cont">
+<div class="calsi">
+<h1>Calculator</h1>
+<input type="text" id="inp" placeholder="Enter values......." readonly="">
+<div class="btns">
+<button onclick="AT_add(0)">0</button>
+<button onclick="AT_add(1)">1</button>
+<button onclick="AT_add(2)">2</button>
+<button onclick="AT_add(3)">3</button>
+<button onclick="AT_add(4)">4</button>
+<button onclick="AT_add(5)">5</button>
+<button onclick="AT_add(6)">6</button>
+<button onclick="AT_add(7)">7</button>
+<button onclick="AT_add(8)">8</button>
+<button onclick="AT_add(9)">9</button>
+<button onclick="AT_add('+')">+</button>
+<button onclick="AT_add('-')">-</button>
+<button onclick="AT_add('/')">/</button>
+<button onclick="AT_add('*')">*</button>
+</div>
+<button onclick="exe()">=</button>
+<button onclick="cancel()">⌫</button>
+<button onclick="cls()">c</button>
+</div>
+<script>var val=document.getElementById("inp");
+
+function AT_add(v){
+val.value+=v;
+}
+
+
+function cls(){
+val.value="";
+}
+
+function exe(){
+val.value=eval(val.value);
+}
+
+
+function cancel(){
+val.value=val.value.substr(0,val.value.length-1);
+}</script>
+</body>
+</html>
